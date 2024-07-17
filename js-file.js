@@ -1,7 +1,7 @@
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#open");
 const closeButton = document.querySelector("#close-dialog");
-const addBook = document.querySelector("#add-book")
+const form = document.querySelector("#myForm")
 
 showButton.addEventListener("click", () => {
     dialog.showModal();
@@ -57,7 +57,7 @@ function addBookToLibrary() {
         p3.textContent = `Read: ${book.status}` ;
 
         remove.textContent = "Remove"
-        changeStatus.textContent = "changeStatus"
+        changeStatus.textContent = "Change Status"
 
 
         container.appendChild(h3);
@@ -92,7 +92,7 @@ function addBookToLibrary() {
     })
 }
 
-addBook.addEventListener("click", function(event){
+form.addEventListener("submit", function(event){
 
     event.preventDefault();
 
