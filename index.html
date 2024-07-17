@@ -16,13 +16,42 @@
             <div class="search-box">
                 <input type="text" id="search" placeholder="Search Books...">
             </div>
-            <div class="add-books">
-                <button id="add">Add Book</button>
+            <div class="open-modal">
+                <button id="open">Add Book</button>
             </div>
+            <dialog>
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" id="title" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="page">Page:</label>
+                        <input type="text" name="page" id="page" required="" pattern="^[0-9]+$">
+                    </div>
+                    <div class="form-group" id="read-group">
+                        <label for="status">Did you read ?</label>
+                        <select name="status" id="status"> 
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="dialog-buttons">
+                        <button type="submit" id="add-book">Add Book</button>
+                        <button type="button" id="close-dialog">Close</button>
+                    </div>
+                </form>
+            </dialog>
         </div>
         <div class="main-content">
         </div>
     </div>
+<script src="./js-file.js"></script>
+    
 
     
 </body>
